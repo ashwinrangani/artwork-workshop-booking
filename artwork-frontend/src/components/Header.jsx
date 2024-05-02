@@ -44,7 +44,7 @@ const Header = () => {
           <h2 className="text-3xl ml-14 md:ml-0 md:text-6xl font-bold tracking-tight text-white">
             
             <span className=" animate-pulse duration-200 text-3xl md:text-6xl">
-            <Fade cascade duration={300}> HandsWithVision</Fade>
+            <Fade cascade duration={300}> ArtInsight</Fade>
             </span>{" "}
             BY{" "}
             <span className="tracking-tight text-white text-3xl md:text-6xl mx-1 font-bold  relative inline-block stroke-current">
