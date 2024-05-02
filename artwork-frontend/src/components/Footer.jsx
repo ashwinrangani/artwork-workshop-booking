@@ -11,11 +11,12 @@ const Footer = () => {
   const [message, setMessage] = useState('')
   const[feedback, setFeedback] = useState(null)
 
+  const base_url = import.meta.env.VITE_BASE_URL
 
   const handleSubmit = async(e) => {
     e.preventDefault();
 try {
-const response = await axios.post('http://localhost:4000/feedback',{
+const response = await axios.post(`${base_url}/feedback`,{
       name, email, message
     })
   if(response){

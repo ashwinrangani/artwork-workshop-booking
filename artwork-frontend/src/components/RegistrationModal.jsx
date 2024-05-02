@@ -10,7 +10,7 @@ const Modal = ({closeModal, workshop }) => {
   const [email, setEmail] = useState('');
   const [contact, setContact] = useState('');
   
-
+  const base_url = import.meta.env.VITE_BASE_URL
   const navigate = useNavigate();
   const { updateUser } = useUser();
 
@@ -21,7 +21,7 @@ const Modal = ({closeModal, workshop }) => {
         if(userObject){
           const registerUser = async() => {
             
-            const response = await axios.post('http://localhost:4000/registration', {
+            const response = await axios.post(`${base_url}/registration`, {
               workshop : workshop, name: userObject.name, email: userObject.email, contact: contact
             })
             console.log(response);
@@ -49,7 +49,7 @@ const Modal = ({closeModal, workshop }) => {
   const userRegistration = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4000/registration', {
+      const response = await axios.post(`${base_url}/registration`, {
         workshop, name, email, contact
       })
       console.log(response.data)

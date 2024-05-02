@@ -8,13 +8,15 @@ const UsersWorkshop = () => {
     const [user, setUser] = useState([]);
     const [email, setEmail] = useState('');
 
+    const base_url = import.meta.env.VITE_BASE_URL
+
     const navigate = useNavigate()
 
     const getUser = async (e) => {
         e.preventDefault();
         try {
             if (email) {
-                const response = await axios.get(`http://localhost:4000/getparticipant/${email}`);
+                const response = await axios.get(`${base_url}/getparticipant/${email}`);
                 const { user } = response.data;
                 console.log(user);
                 if (user) {

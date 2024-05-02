@@ -14,6 +14,8 @@ const Payment = () => {
   const [amountToPay, setAmountToPay] = useState(100)
   const navigate = useNavigate();
 
+  const base_url = import.meta.env.VITE_BASE_URL
+
   const { userData } = useUser();
   console.log(userData);
 
@@ -22,7 +24,7 @@ const Payment = () => {
     const currency = "INR";
     const receiptId = "receipt-1";
 
-    const response = await axios.post("http://localhost:4000/order", {
+    const response = await axios.post(`${base_url}/order`, {
       amount,
       currency,
       receipt: receiptId,
@@ -44,7 +46,7 @@ const Payment = () => {
           response;
 
         const validateResponse = await axios.post(
-          "http://localhost:4000/validate",
+          `${base_url}/validate`,
           {
             razorpay_order_id,
             razorpay_payment_id,
