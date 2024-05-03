@@ -37,7 +37,7 @@ const WorkshopResin = () => {
                 <img
                 
                   key={index}
-                  className="w-28 h-28 md:h-48 md:w-60 lg:h-48 lg:w-60  object-cover rounded-lg"
+                  className="w-28 h-28 md:h-48 md:w-60 lg:h-48 lg:w-60 border border-teal-100  object-cover rounded-lg"
                   src={image.src}
                   alt={`Resin Workshop ${index + 1}`}
                 /> 

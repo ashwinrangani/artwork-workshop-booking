@@ -32,10 +32,10 @@ const Header = () => {
           }}
         />
       </div>
-      <div className="absolute  mt-2 md:right-48">
+      <div className="absolute right-auto mt-2  md:right-16 lg:right-48 ">
         <Zoom duration={2000}>
         <img
-          className="w-16 h-16 ml-2 md:w-52 md:h-52 border-2 border-blue-900 hover:border-gray-500 md:border-4 rounded-full"
+          className="w-16 h-16 ml-2 md:w-36 md:h-36 lg:w-52 lg:h-52 border-2 border-blue-900 hover:border-gray-500 md:border-4 rounded-full"
           src="./my-image.jpg"
         /></Zoom>
       </div>

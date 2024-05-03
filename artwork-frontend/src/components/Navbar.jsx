@@ -58,7 +58,7 @@ useEffect(() => {
             </a>
           </div>
          
-          <div className="flex lg:hidden">
+          <div className="flex lg:hidden md:hidden">
             <button
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -69,7 +69,7 @@ useEffect(() => {
             </button>
           </div>
           
-          <div className={`hidden lg:flex lg:gap-x-12 w-[30%] fixed justify-center ${
+          <div className={`hidden lg:flex md:flex lg:gap-x-12 md:gap-x-4 w-[30%] fixed justify-center ${
     visible ? '' : 'bg-[#6B2323] right-1 rounded-full bg-opacity-80 p-3 flex transition ease-out duration-400 justify-center items-center h-12'
 }`}>
 

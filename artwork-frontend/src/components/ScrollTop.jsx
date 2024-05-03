@@ -36,7 +36,7 @@ const ScrollTop = () => {
             className={`fixed bottom-8 md:bottom-6 right-3 md:right-10 ${visible ? 'block' : 'hidden'}`} 
             
         > 
-            <ArrowUpTrayIcon className='h-9 w-9 text-yellow-50 bg-black rounded-full p-1 hover:bg-slate-700'/> 
+            <ArrowUpTrayIcon className='h-9 w-9 text-black bg-white rounded-full p-1 hover:bg-gray-200'/> 
         </button> 
       </div>
     
