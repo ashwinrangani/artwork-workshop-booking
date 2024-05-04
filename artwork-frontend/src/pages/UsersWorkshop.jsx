@@ -2,11 +2,13 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Fade } from 'react-awesome-reveal';
+import LoadingDots from '../components/LoadingDots';
 
 const UsersWorkshop = () => {
     
     const [user, setUser] = useState([]);
     const [email, setEmail] = useState('');
+    const [loading, setLoading] = useState(false)
 
     const base_url = import.meta.env.VITE_BASE_URL
 
@@ -16,6 +18,7 @@ const UsersWorkshop = () => {
         e.preventDefault();
         try {
             if (email) {
+                setLoading(true)
                 const response = await axios.get(`${base_url}/getparticipant/${email}`);
                 const { user } = response.data;
                 console.log(user);
@@ -23,6 +26,7 @@ const UsersWorkshop = () => {
                     setUser(user);
                     
                 }
+                setLoading(false)
             }
         } catch (error) {
             console.error(error);
@@ -55,7 +59,8 @@ const UsersWorkshop = () => {
            
             <div className="flex flex-wrap justify-center bg-[#351b26] mt-8">
            
-    {user.map((person, index) => (
+    {loading ?
+     (<LoadingDots />)  :  (user.map((person, index) => (
          <Fade>
         <div key={index} className="w-96 mx-4 mb-8 mt-8">
            
@@ -81,7 +86,7 @@ const UsersWorkshop = () => {
         </div>
        
         </Fade> 
-    ))}
+    )))}
   
 </div>
 
