@@ -58,7 +58,7 @@ useEffect(() => {
             </a>
           </div>
          
-          <div className="flex lg:hidden md:hidden">
+          <div className="flex  lg:hidden md:hidden">
             <button
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -76,14 +76,15 @@ useEffect(() => {
             {navigation.map((item) => (
               <a key={item.name} href={item.href} className="text-sm text-white font-semibold leading-6 group  transition duration-300">
                 {item.name}
-                <span class="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-sky-600"></span>
+                <span className="block max-w-0 group-hover:max-w-full transition-all duration-300 h-0.5 bg-sky-600"></span>
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <div className="hidden lg:flex md:flex lg:flex-1 lg:justify-end">
             <Link to={'/yourworkshop'}>
             <a href="#" className="text-sm font-semibold leading-6 text-gray-200">
             Your Workshop <span aria-hidden="true">&rarr;</span>
+            
             </a>
             </Link>
           </div>
@@ -92,7 +93,7 @@ useEffect(() => {
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />
           
-          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+          <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#efbdbd] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           
             <div className="flex items-center justify-between">
               <a href="#" className="-m-1.5 p-1.5">

@@ -49,7 +49,7 @@ const WorkshopResin = () => {
                 <h2 className="text-3xl font-bold text-gray-200 mb-2">Resin Table Top Workshop - Mumbai</h2>
                 <p className="text-gray-200  text-md mb-2">
                 Are you ready to create beautiful Resin products??
-                  Welcome to HandsWithVision WORKSHOPS!
+                  Welcome to ArtINSIGHT workshops!
                 </p>
                 <p className="text-gray-300 font-semibold text-xl mt-1">
                     Session Overview :

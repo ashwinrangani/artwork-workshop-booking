@@ -36,8 +36,8 @@ const Header = () => {
       <div className="absolute right-auto mt-2  md:right-16 lg:right-48 ">
         <Zoom duration={2000}>
         <img
-          className="w-16 h-16 ml-2 md:w-36 md:h-36 lg:w-52 lg:h-52 border-2 border-blue-900 hover:border-gray-500 md:border-4 rounded-full"
-          src="./my-image.jpg"
+          className="w-16 h-16 ml-2 md:w-36 md:h-36 lg:w-52 lg:h-52 border-2 border-gray-400 hover:border-gray-500 md:border-4 rounded-full"
+          src="./my-image2.jpg"
         /></Zoom>
       </div>
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -49,7 +49,7 @@ const Header = () => {
             </span>{" "}
             BY{" "}
             <span className="tracking-tight text-white text-3xl md:text-6xl mx-1 font-bold  relative inline-block stroke-current">
-              URJA KARIA
+            Ahana Jain
               <svg
                 class="absolute -bottom-0.5 w-full max-h-1.5"
                 viewBox="0 0 55 5"
