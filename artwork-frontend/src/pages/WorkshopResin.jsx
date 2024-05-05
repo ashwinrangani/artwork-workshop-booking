@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 
 const WorkshopResin = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [workshop, setWorkshop] = useState('Resin Top Workshop');
+  const [workshop, setWorkshop] = useState('Resin Top Workshop-Mumbai');
   
   
   const openModal = () => {

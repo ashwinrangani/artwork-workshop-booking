@@ -37,9 +37,9 @@ const Payment = () => {
       key: "rzp_test_in0Ik9ppHr9Jvx",
       amount,
       currency,
-      name: "Ashwin Rangani",
+      name: "Ahana Jain",
       description: "test",
-      image: "./my-image.jpg",
+      image: "./my-image2.jpg",
       order_id: order.id,
       handler: async function (response) {
         const { razorpay_order_id, razorpay_payment_id, razorpay_signature } =

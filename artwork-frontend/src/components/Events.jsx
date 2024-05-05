@@ -38,7 +38,7 @@ const Events = () => {
             alt="workshop image"
             className="h-40 w-72 object-cover rounded-md"
           />
-          <p className="mt-2 text-xl text-gray-300 text-center">Resin Top Workshop</p>
+          <p className="mt-2 text-xl text-gray-300 text-center">Resin Table Top Workshop</p>
           <span className="flex items-center text-gray-300 gap-2 ml-4 mt-4">
             <MapPinIcon className="h-5 w-5 text-gray-300" />Food Cafe, Bandra, Mumbai
           </span>
@@ -69,23 +69,23 @@ const Events = () => {
             alt="workshop image"
             className="h-40 w-72 object-cover rounded-md"
           />
-          <p className="mt-2 text-xl text-gray-300 text-center">Resin Top Workshop</p>
-          <span className="flex items-center text-gray-300 gap-2 ml-4 mt-4">
-            <MapPinIcon className="h-5 w-5 text-gray-300" />Food Cafe, Bandra, Mumbai
+          <p className="mt-2 text-xl text-gray-300 text-center">Texture Art Moon + Gold Foil</p>
+          <span className="flex items-center text-gray-300 gap-2 ml-4 mt-3">
+            <MapPinIcon className="h-5 w-5 text-gray-300" />Love letters & food cafe, Bandra, Mumbai
           </span>
-          <span className="flex items-center text-gray-300 gap-2 ml-4 mt-4">
-            <CalendarDaysIcon className="h-5 w-5 text-gray-300" />02nd March, Saturday
+          <span className="flex items-center text-gray-300 gap-2 ml-4 mt-3">
+            <CalendarDaysIcon className="h-5 w-5 text-gray-300" />02nd May, Saturday
           </span>
-          <span className="flex items-center text-gray-300 gap-2 ml-4 mt-4">
+          <span className="flex items-center text-gray-300 gap-2 ml-4 mt-3">
             <ClockIcon className="h-5 w-5 text-gray-300" />11am to 01pm
           </span>
-          <div className="flex justify-center gap-3 max-w-sm mt-4">
-            <Link to={'/buyworkshop'}>
+          <div className="flex justify-center gap-3 max-w-sm mt-3">
+            <Link to={'#'}>
             <button
               type="button"
-              className="rounded-md w-48 bg-black/50 px-4 py-2 text-sm font-medium text-gray-200 hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+              className="rounded-md w-48 bg-black/50 px-4 py-2 pb-1 text-sm font-medium text-gray-200 hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
             >
-              Register Now
+              Registration Closed
             </button>
             </Link>
             
