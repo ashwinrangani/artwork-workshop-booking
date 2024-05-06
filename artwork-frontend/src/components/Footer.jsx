@@ -153,7 +153,7 @@ const response = await axios.post(`${base_url}/feedback`,{
                     <textarea
                     value={message}
                     onChange={(e) => setMessage(e.target.value)}
-                      className="block w-full h-30 focus:ring-1 px-4 py-2.5 text-base leading-7 font-normal shadow-xs text-gray-200 bg-transparent border border-gray-300 rounded-2xl placeholder-gray-400 focus:outline-none resize-none"
+                      className="block w-full h-30   px-4 py-2.5 text-base leading-7 font-normal shadow-xs text-gray-200 bg-transparent border border-gray-300 rounded-2xl placeholder-gray-400 focus:outline-2 resize-none"
                       placeholder="Write a message..."
                       name="textarea"
                       

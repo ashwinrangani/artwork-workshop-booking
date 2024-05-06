@@ -56,7 +56,7 @@ const ImageCarousel = () => {
     <Fade >
     <div id='gallery' className='grid grid-col md:flex  border-gray-400 border-1 p-2 md:p-5 bg-gradient-to-tr from-[#351b26] to-[#0c0b28]'>
      <div className='bg-gradient-to-tr from-[#351b26] to-[#0c0b28] flex  items-center pt-5 pb-5 '>
-      <h1 className='text-yellow-400 font-serif leading-1 text-xl text-center'>Some Glimpse of Our Recent Workshop Arts</h1>
+      <h1 className='text-yellow-50 font-serif leading-1 text-xl text-center'>Some Glimpse of Our Recent Workshop Arts</h1>
       </div>
       
 <Slider {...settings} className='overflow-hidden h-72 w-full'>
