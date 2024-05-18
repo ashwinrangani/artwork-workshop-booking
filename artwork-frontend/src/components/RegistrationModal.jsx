@@ -13,7 +13,8 @@ const Modal = ({closeModal, workshop }) => {
   const base_url = import.meta.env.VITE_BASE_URL
   const navigate = useNavigate();
   const { updateUser } = useUser();
-
+  
+//callback from google
     function handleCallbackResponse(response) {
         console.log(response.credential)
         var userObject = jwtDecode(response.credential)
@@ -63,7 +64,26 @@ const Modal = ({closeModal, workshop }) => {
       console.error(error)
     }
   }
-    
+  
+  //cache user's info
+
+  useEffect(() => {
+    const savedName = localStorage.getItem('name');
+    const savedEmail = localStorage.getItem('email');
+    const savedContact = localStorage.getItem('contact');
+
+    if(savedName) setName(savedName);
+    if(savedEmail) setEmail(savedEmail);
+    if(savedContact) setContact(savedContact)
+
+  },[]);
+
+  useEffect(() => {
+    localStorage.setItem('name', name);
+    localStorage.setItem('email', email);
+    localStorage.setItem('contact', contact)
+
+  },[name, email, contact])
 
 
   return (
