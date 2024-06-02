@@ -254,22 +254,22 @@ const Footer = () => {
             <div className="grid md:flex lg:flex justify-center items-center gap-4">
               
               <Link to="/termsandconditions">
-                <a className="text-md text-yellow-100 text-center underline block mb-2">
+                <a className="text-sm text-yellow-100 text-center underline block mb-2">
                   Terms and Conditions
                 </a>
               </Link>
               <Link to='refunds'>
-              <a className="text-md text-yellow-100 text-center underline block mb-2">
+              <a className="text-sm text-yellow-100 text-center underline block mb-2">
                 Cancellation and Refund
               </a>
               </Link>
               <Link to='privacypolicy'>
-              <a className="text-md text-yellow-100 text-center underline block mb-2">
+              <p className="text-sm text-yellow-100 text-center underline block mb-2">
                 Privacy Policy
-              </a>
+              </p>
               </Link>
-              <span className="text-md text-yellow-100 text-center block mb-2">
-                ©<a href="https://pagedone.io/">ArtInsight</a> 2024, All rights
+              <span className="text-sm text-yellow-100 text-center block mb-2">
+                ©<a href="">ArtInsight</a> 2024, All rights
                 reserved.
               </span>
             </div>
