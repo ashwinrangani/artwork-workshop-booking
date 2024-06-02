@@ -1,50 +1,47 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { Fade, Slide } from "react-awesome-reveal";
+import { Fade } from "react-awesome-reveal";
 import Accordion from "./Accordion";
 import ScrollTop from "./ScrollTop";
+import TermsAndConditions from "./TermsandConditions";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [feedback, setFeedback] = useState(null);
 
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('')
-  const [message, setMessage] = useState('')
-  const[feedback, setFeedback] = useState(null)
+  const base_url = import.meta.env.VITE_BASE_URL;
 
-  const base_url = import.meta.env.VITE_BASE_URL
-
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-try {
-const response = await axios.post(`${base_url}/feedback`,{
-      name, email, message
-    })
-  if(response){
-      setFeedback(response.data)
-      setTimeout(() => {
-      setEmail('')
-      setName('')
-      setMessage('')
-      setFeedback(null)
-      }, 7000)
-      
-      
+    try {
+      const response = await axios.post(`${base_url}/feedback`, {
+        name,
+        email,
+        message,
+      });
+      if (response) {
+        setFeedback(response.data);
+        setTimeout(() => {
+          setEmail("");
+          setName("");
+          setMessage("");
+          setFeedback(null);
+        }, 7000);
+      }
+    } catch (error) {
+      setFeedback(error);
+      console.error(error);
     }
-} catch (error) {
-  setFeedback(error)
-  console.error(error)
-}
-    
-    
-
-   
-    
-  }
-    
-  
+  };
 
   return (
-    <div id="about" className="relative w-full mx-auto overflow-hidden h-max bg-[#351b26]">
+    <div
+      id="about"
+      className="relative w-full mx-auto overflow-hidden h-max bg-[#351b26]"
+    >
       <div className="absolute -top-0.5 left-0 w-[100%] overflow-hidden leading-0 transform rotate-180">
         <svg
           className="relative block h-10  md:h-20 "
@@ -74,7 +71,10 @@ const response = await axios.post(`${base_url}/feedback`,{
             <h1 className="text-center -mt-5 text-2xl text-yellow-50 font-serif">
               Drop Your Query Here
             </h1>
-            <form onSubmit={handleSubmit} className="mt-4 pl-6 pr-6 md:pl-0 md:pr-0 w-96">
+            <form
+              onSubmit={handleSubmit}
+              className="mt-4 pl-6 pr-6 md:pl-0 md:pr-0 w-96"
+            >
               <div className="relative mb-6">
                 <label className="flex  items-center mb-2 text-gray-300 text-sm font-medium">
                   Name{" "}
@@ -124,11 +124,9 @@ const response = await axios.post(`${base_url}/feedback`,{
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   name="email"
-                
                   className="block w-full focus:ring-2 h-11 px-5 py-2.5 leading-7 text-base font-normal shadow-xs text-gray-200 bg-transparent border border-gray-300 rounded-full placeholder-gray-400 "
                   placeholder="yourname@email.com"
                   required
-                  
                 />
               </div>
               <div className="relative mb-6">
@@ -151,32 +149,40 @@ const response = await axios.post(`${base_url}/feedback`,{
                 <div className="flex">
                   <div className="relative w-full">
                     <textarea
-                    value={message}
-                    onChange={(e) => setMessage(e.target.value)}
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
                       className="block w-full h-30   px-4 py-2.5 text-base leading-7 font-normal shadow-xs text-gray-200 bg-transparent border border-gray-300 rounded-2xl placeholder-gray-400 focus:outline-2 resize-none"
                       placeholder="Write a message..."
                       name="textarea"
-                      
                       required
                     ></textarea>
                   </div>
                 </div>
               </div>
-             
-              <button 
-              type="submit"
-              className=" w-full relative h-12 rounded-full bg-black/50 px-4 py-2 text-sm font-medium text-gray-200 hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75">
+
+              <button
+                type="submit"
+                className=" w-full relative h-12 rounded-full bg-black/50 px-4 py-2 text-sm font-medium text-gray-200 hover:bg-black/30 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/75"
+              >
                 Send Message
               </button>
-          
             </form>
             <Fade direction="right">
-            {feedback? (
-              
-            <dialog className=" h-8 mt-3 relative bg-red-300 text-md p-1 rounded-lg" open>{feedback}</dialog>) : '' }
+              {feedback ? (
+                <dialog
+                  className=" h-8 mt-3 relative bg-red-300 text-md p-1 rounded-lg"
+                  open
+                >
+                  {feedback}
+                </dialog>
+              ) : (
+                ""
+              )}
             </Fade>
-            <div className="-mt-8" ><Accordion /></div>
-                        
+            <div className="-mt-8">
+              <Accordion />
+            </div>
+
             <div className="flex space-x-10 justify-center items-center mb-14 mt-6">
               <a
                 href="#"
@@ -245,14 +251,30 @@ const response = await axios.post(`${base_url}/feedback`,{
                 </svg>
               </a>
             </div>
-            <span className="text-lg text-yellow-100 text-center block mb-2">
-              ©<a href="https://pagedone.io/">ArtInsight</a> 2024, All rights
-              reserved.
-            </span>
+            <div className="grid md:flex lg:flex justify-center items-center gap-4">
+              
+              <Link to="/termsandconditions">
+                <a className="text-md text-yellow-100 text-center underline block mb-2">
+                  Terms and Conditions
+                </a>
+              </Link>
+              <Link to='refunds'>
+              <a className="text-md text-yellow-100 text-center underline block mb-2">
+                Cancellation and Refund
+              </a>
+              </Link>
+              <Link to='privacypolicy'>
+              <a className="text-md text-yellow-100 text-center underline block mb-2">
+                Privacy Policy
+              </a>
+              </Link>
+              <span className="text-md text-yellow-100 text-center block mb-2">
+                ©<a href="https://pagedone.io/">ArtInsight</a> 2024, All rights
+                reserved.
+              </span>
+            </div>
             <ScrollTop />
-            
           </div>
-          
         </div>
       </footer>
     </div>

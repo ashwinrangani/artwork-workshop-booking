@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
+import { Slide } from 'react-awesome-reveal'
 
 
 const navigation = [
@@ -48,7 +49,7 @@ useEffect(() => {
       <header className="absolute inset-x-0 top-0 z-50">
         <nav className="flex items-center justify-between p-6 lg:px-8" aria-label="Global">
           <div className="flex lg:flex-1">
-            <a href="#" className="-m-1.5 p-1.5">
+            <a className="-m-1.5 p-1.5">
               <span className="sr-only">Your Company</span>
               <img
                 className="h-12 w-12 rounded-full"
@@ -57,8 +58,21 @@ useEffect(() => {
               />
             </a>
           </div>
-         
-          <div className="flex  lg:hidden md:hidden">
+          <div className="flex justify-end items-end -mr-20 md:mr-0 lg:mr-0">
+            <Link to={'/yourworkshop'}>
+            <a className="text-sm font-semibold leading-6 text-gray-200">
+            Your Workshop <span aria-hidden="true"></span>
+            
+            </a>
+            </Link>
+            <Link to={'/products'}>
+            <a className="text-sm font-semibold leading-6 pl-4 md:pl-6 text-gray-200">
+            Products <span aria-hidden="true"></span>
+            
+            </a>
+            </Link>
+          </div>
+          <div className="flex lg:hidden md:hidden">
             <button
               type="button"
               className="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-gray-700"
@@ -80,23 +94,16 @@ useEffect(() => {
               </a>
             ))}
           </div>
-          <div className="hidden lg:flex md:flex lg:flex-1 lg:justify-end">
-            <Link to={'/yourworkshop'}>
-            <a href="#" className="text-sm font-semibold leading-6 text-gray-200">
-            Your Workshop <span aria-hidden="true">&rarr;</span>
-            
-            </a>
-            </Link>
-          </div>
+          
         </nav>
         
         <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
           <div className="fixed inset-0 z-50" />
           
           <Dialog.Panel className="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-[#efbdbd] px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
-          
+          <Slide direction='right'>
             <div className="flex items-center justify-between">
-              <a href="#" className="-m-1.5 p-1.5">
+              <a className="-m-1.5 p-1.5">
                 <span className="sr-only">Your Company</span>
                 <img
                   className="h-10 w-10 rounded-full" 
@@ -121,6 +128,7 @@ useEffect(() => {
                     <a
                       key={item.name}
                       href={item.href}
+                      onClick={()=> setMobileMenuOpen(false)}
                       className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                     >
                       {item.name}
@@ -139,10 +147,11 @@ useEffect(() => {
                 </div>
               </div>
             </div>
-            
+            </Slide>
           </Dialog.Panel>
           
         </Dialog>
+       
        
       </header>
     
