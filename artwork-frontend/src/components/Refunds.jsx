@@ -50,7 +50,7 @@ const Refunds = () => {
             <p>
               If you have any questions or concerns regarding our cancellation and refund policy, please contact us:
             </p>
-            <p>Email: support@example.com</p>
+            <p>Email: ashwyn.rangani@gmail.com</p>
             <p>Phone: (+91) 98792 03750</p>
           </section>
         </div>

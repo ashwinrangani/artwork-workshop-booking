@@ -44,8 +44,8 @@ const PrivacyPolicy = () => {
             <p>
               If you have any questions or concerns regarding our Privacy Policy, please contact us:
             </p>
-            <p>Email: privacy@example.com</p>
-            <p>Phone: (123) 456-7890</p>
+            <p>Email: ashwyn.rangani@gmail.com</p>
+            <p>Phone: (+91) 98792 03752</p>
           </section>
         </div>
       </div>

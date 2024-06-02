@@ -35,7 +35,7 @@ const Payment = () => {
     console.log(order);
 
     const option = {
-      key: "rzp_test_in0Ik9ppHr9Jvx",
+      key: "rzp_live_GLjKtM9qukoO8B",
       amount,
       currency,
       name: "Ahana Jain",
