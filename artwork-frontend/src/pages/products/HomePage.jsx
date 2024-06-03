@@ -15,6 +15,9 @@ const HomePage = () => {
       <h1 className='text-gray-300'>Cart</h1>
     </div>
   </div>
+  <div className='flex justify-center'>
+    <h1 className='text-2xl animate-pulse text-gray-300'>The Store is under development</h1>
+  </div>
 </div>
 
   )

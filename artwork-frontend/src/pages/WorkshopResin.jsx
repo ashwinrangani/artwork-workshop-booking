@@ -81,7 +81,7 @@ const WorkshopResin = () => {
                 <div className="flex mb-4 mt-2">
                     <div className="mr-4">
                         <span className="font-semibold text-xl text-gray-300 ">Price:</span>
-                        <span className="text-gray-300 font-semibold text-xl dark:text-gray-300"> ₹ 5999</span>
+                        <span className="text-gray-300 font-semibold text-xl dark:text-gray-300"> ₹ 5 </span>
                     </div>
                 </div>
                 <div className="flex mt-2">

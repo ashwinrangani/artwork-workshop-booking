@@ -12,7 +12,7 @@ const Payment = () => {
   const [paymentSuccess, setPaymentSuccess] = useState(false);
   const [order, setOrder] = useState('')
   const [paymentID, setPaymentID] = useState('')
-  const [amountToPay, setAmountToPay] = useState(100)
+  const [amountToPay, setAmountToPay] = useState(500)
   const navigate = useNavigate();
 
   const base_url = import.meta.env.VITE_BASE_URL
